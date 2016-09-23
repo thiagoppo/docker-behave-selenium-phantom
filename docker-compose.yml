@@ -1,0 +1,6 @@
+version: '2'
+services:
+  bdd:
+    build: .
+    container_name: bdd_python
+    command: top -b
