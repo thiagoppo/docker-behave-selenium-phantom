@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:15.10
 
 #Atualizado
 RUN apt-get update
@@ -22,6 +22,9 @@ RUN sudo apt-get -y install npm
 #Instalando PhantamJS
 RUN sudo npm install -g phantomjs-prebuilt
 RUN sudo npm install -g phantomjs
+
+#Instalando Chromium
+RUN sudo apt-get install chromium-browser
 
 COPY ./requirements.txt /home/requirements.txt
 RUN pip install -r /home/requirements.txt
