@@ -16,8 +16,8 @@ RUN apt-get -y install nodejs
 RUN apt-get install build-essential
 
 #Instalando PhantamJS
-RUN npm install -g phantomjs-prebuilt
-RUN npm install -g phantomjs
+RUN npm install -g phantomjs-prebuilt --upgrade --unsafe-perm
+RUN npm install -g phantomjs --upgrade --unsafe-perm
 
 #Instalando Chromium
 RUN apt-get install -y chromium-browser
