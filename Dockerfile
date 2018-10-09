@@ -1,20 +1,22 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 #Atualizado
 RUN apt-get update
+
+#Instalando Curl
+RUN apt-get -y install curl
 
 #Instalando Pip
 RUN apt-get -y install python-setuptools python-dev build-essential libfontconfig
 RUN easy_install pip
 
 #Instalando Node
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get -y install nodejs
+RUN apt-get install build-essential
 
 #Configurando nodejs
 RUN ln -s /usr/bin/nodejs /usr/bin/node
-
-#Instalando Configurando nodejs-legacy
-RUN apt-get -y install nodejs-legacy
 
 #Instalando NPM
 RUN apt-get -y install npm
