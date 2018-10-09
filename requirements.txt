@@ -1,5 +1,4 @@
 argparse==1.2.1
-assertEquals==0.4.4
 behave==1.2.5
 ecdsa==0.13
 enum34==1.0
