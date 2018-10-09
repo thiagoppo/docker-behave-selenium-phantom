@@ -15,12 +15,6 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get -y install nodejs
 RUN apt-get install build-essential
 
-#Configurando nodejs
-RUN ln -s /usr/bin/nodejs /usr/bin/node
-
-#Instalando NPM
-RUN apt-get -y install npm
-
 #Instalando PhantamJS
 RUN npm install -g phantomjs-prebuilt
 RUN npm install -g phantomjs
